@@ -4,7 +4,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :name
       t.string :location
       t.datetime :datetime
-      t.textarea :notes
+      t.text :notes
       t.references :newsletters, index: true
 
       t.timestamps null: false
