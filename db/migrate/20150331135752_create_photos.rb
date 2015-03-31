@@ -5,7 +5,7 @@ class CreatePhotos < ActiveRecord::Migration
       t.string :url
       t.date :date
       t.text :notes
-      t.references :newsletters, index: true
+      t.references :newsletter, index: true
 
       t.timestamps null: false
     end

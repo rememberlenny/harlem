@@ -5,7 +5,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :location
       t.datetime :datetime
       t.text :notes
-      t.references :newsletters, index: true
+      t.references :newsletter, index: true
 
       t.timestamps null: false
     end
