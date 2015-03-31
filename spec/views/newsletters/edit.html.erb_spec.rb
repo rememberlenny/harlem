@@ -5,8 +5,8 @@ RSpec.describe "newsletters/edit", type: :view do
     @newsletter = assign(:newsletter, Newsletter.create!(
       :title => "MyString",
       :message => "MyText",
-      :schedule_id => 1,
-      :photo_id => 1
+      :schedules => "MyText",
+      :photos => "MyText"
     ))
   end
 
@@ -19,9 +19,9 @@ RSpec.describe "newsletters/edit", type: :view do
 
       assert_select "textarea#newsletter_message[name=?]", "newsletter[message]"
 
-      assert_select "input#newsletter_schedule_id[name=?]", "newsletter[schedule_id]"
+      assert_select "textarea#newsletter_schedules[name=?]", "newsletter[schedules]"
 
-      assert_select "input#newsletter_photo_id[name=?]", "newsletter[photo_id]"
+      assert_select "textarea#newsletter_photos[name=?]", "newsletter[photos]"
     end
   end
 end

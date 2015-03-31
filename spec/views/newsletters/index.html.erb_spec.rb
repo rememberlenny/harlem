@@ -6,14 +6,14 @@ RSpec.describe "newsletters/index", type: :view do
       Newsletter.create!(
         :title => "Title",
         :message => "MyText",
-        :schedule_id => 1,
-        :photo_id => 2
+        :schedules => "MyText",
+        :photos => "MyText"
       ),
       Newsletter.create!(
         :title => "Title",
         :message => "MyText",
-        :schedule_id => 1,
-        :photo_id => 2
+        :schedules => "MyText",
+        :photos => "MyText"
       )
     ])
   end
@@ -22,7 +22,7 @@ RSpec.describe "newsletters/index", type: :view do
     render
     assert_select "tr>td", :text => "Title".to_s, :count => 2
     assert_select "tr>td", :text => "MyText".to_s, :count => 2
-    assert_select "tr>td", :text => 1.to_s, :count => 2
-    assert_select "tr>td", :text => 2.to_s, :count => 2
+    assert_select "tr>td", :text => "MyText".to_s, :count => 2
+    assert_select "tr>td", :text => "MyText".to_s, :count => 2
   end
 end

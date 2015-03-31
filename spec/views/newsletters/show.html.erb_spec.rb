@@ -5,8 +5,8 @@ RSpec.describe "newsletters/show", type: :view do
     @newsletter = assign(:newsletter, Newsletter.create!(
       :title => "Title",
       :message => "MyText",
-      :schedule_id => 1,
-      :photo_id => 2
+      :schedules => "MyText",
+      :photos => "MyText"
     ))
   end
 
@@ -14,7 +14,7 @@ RSpec.describe "newsletters/show", type: :view do
     render
     expect(rendered).to match(/Title/)
     expect(rendered).to match(/MyText/)
-    expect(rendered).to match(/1/)
-    expect(rendered).to match(/2/)
+    expect(rendered).to match(/MyText/)
+    expect(rendered).to match(/MyText/)
   end
 end

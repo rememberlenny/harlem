@@ -1,1 +1,1 @@
-json.extract! @newsletter, :id, :title, :message, :schedule_id, :photo_id, :created_at, :updated_at
+json.extract! @newsletter, :id, :title, :message, :schedules, :photos, :created_at, :updated_at
