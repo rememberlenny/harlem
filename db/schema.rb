@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150331024709) do
+ActiveRecord::Schema.define(version: 20150331024859) do
 
   create_table "newsletters", force: :cascade do |t|
     t.string   "title"
     t.text     "message"
-    t.text     "schedule_id"
-    t.text     "photo_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.text     "schedules"
+    t.text     "photos"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
