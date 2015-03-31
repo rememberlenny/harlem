@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20150331024709) do
   create_table "newsletters", force: :cascade do |t|
     t.string   "title"
     t.text     "message"
-    t.integer  "schedule_id"
-    t.integer  "photo_id"
+    t.text     "schedule_id"
+    t.text     "photo_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
