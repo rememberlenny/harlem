@@ -20,9 +20,9 @@
         <td><%= newsletter.message %></td>
         <td><%= newsletter.schedules %></td>
         <td><%= newsletter.photos %></td>
-        <td><%= link_to 'Show', newsletter %></td>
-        <td><%= link_to 'Edit', edit_newsletter_path(newsletter) %></td>
-        <td><%= link_to 'Destroy', newsletter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', newsletter, :class => 'button tiny' %></td>
+        <td><%= link_to 'Edit', edit_newsletter_path(newsletter), :class => 'button tiny' %></td>
+        <td><%= link_to 'Destroy', newsletter, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button tiny' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Newsletter', new_newsletter_path %>
+<%= link_to 'New Newsletter', new_newsletter_path, :class => 'button' %>
