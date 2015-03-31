@@ -1,23 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row">
-
-  <h1>Example</h1>
-  <div class="content-example">
-    <%= render 'newsletters/email' %>
-  </div>
-
-  <h1>Code</h1>
-  <p>Copy and paste the content below</p>
-  <div class="content-code">
-    <textarea name="" id="" cols="30" rows="10">
-      <%= render 'newsletters/email' %>
-    </textarea>
-  </div>
-
-  <div class="content-action">
-    <%= link_to 'Edit', edit_newsletter_path(@newsletter), :class => 'button small' %>
-    <%= link_to 'Back', newsletters_path, :class => 'button small' %>
-  </div>
+<h1>Example</h1>
+<div class="content-example">
+  <%= render 'newsletters/email' %>
 </div>
 
+<h1>Code</h1>
+<p>Copy and paste the content below</p>
+<div class="content-code">
+  <textarea name="" id="" cols="30" rows="10">
+    <%= render 'newsletters/email' %>
+  </textarea>
+</div>
+
+<div class="content-action">
+  <%= link_to 'Edit', edit_newsletter_path(@newsletter), :class => 'button small' %>
+  <%= link_to 'Back', newsletters_path, :class => 'button small' %>
+</div>
