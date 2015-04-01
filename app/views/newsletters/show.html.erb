@@ -4,6 +4,9 @@
   <%= render 'newsletters/email' %>
 </div>
 
+<%= link_to 'New Photo', new_newsletter_photo_path(@newsletter), :class => 'button small' %>
+<%= link_to 'New Schedule', new_newsletter_event_path(@newsletter), :class => 'button small' %>
+
 <h1>Code</h1>
 <p>Copy and paste the content below</p>
 <div class="content-code">
@@ -13,6 +16,6 @@
 </div>
 
 <div class="content-action">
-  <%= link_to 'Edit', edit_newsletter_path(@newsletter), :class => 'button small' %>
-  <%= link_to 'Back', newsletters_path, :class => 'button small' %>
+  <%= link_to 'Edit', edit_newsletter_path(@newsletter), :class => 'button small secondary' %>
+  <%= link_to 'Back', newsletters_path, :class => 'button small secondary' %>
 </div>
