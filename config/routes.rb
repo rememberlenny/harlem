@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :events
-  resources :photos
+  # resources :events
+  # resources :photos
 
   resources :newsletters do
     resources :events

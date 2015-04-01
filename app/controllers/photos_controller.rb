@@ -10,10 +10,12 @@ class PhotosController < ApplicationController
   # GET /photos/1
   # GET /photos/1.json
   def show
+
   end
 
   # GET /photos/new
   def new
+    @newsletter = Newsletter.find(params[:newsletter_id])
     @photo = Photo.new
   end
 
@@ -24,12 +26,13 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.json
   def create
+    @newsletter = Newsletter.find(params[:newsletter_id])
     @photo = Photo.new(photo_params)
 
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
-        format.json { render :show, status: :created, location: @photo }
+        format.html { redirect_to [@newsletter, @photo], notice: 'Photo was successfully created.' }
+        format.json { render :show, status: :created, location: [@newsletter, @photo] }
       else
         format.html { render :new }
         format.json { render json: @photo.errors, status: :unprocessable_entity }
@@ -42,8 +45,8 @@ class PhotosController < ApplicationController
   def update
     respond_to do |format|
       if @photo.update(photo_params)
-        format.html { redirect_to @photo, notice: 'Photo was successfully updated.' }
-        format.json { render :show, status: :ok, location: @photo }
+        format.html { redirect_to [@newsletter, @photo], notice: 'Photo was successfully updated.' }
+        format.json { render :show, status: :ok, location: [@newsletter, @photo] }
       else
         format.html { render :edit }
         format.json { render json: @photo.errors, status: :unprocessable_entity }
@@ -65,10 +68,11 @@ class PhotosController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_photo
       @photo = Photo.find(params[:id])
+      @newsletter = Newsletter.find(params[:newsletter_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:title, :url, :date, :notes)
+      params.require(:photo).permit(:title, :url, :date, :notes, :newsletter_id)
     end
 end

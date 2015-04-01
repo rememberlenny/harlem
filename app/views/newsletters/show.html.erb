@@ -16,6 +16,11 @@
   </div>
   <div class="large-6 column">
     <h2>Photos</h2>
+    <% @photos.each do |photo| %>
+      <div class="row">
+        <%= photo %>
+      </div>
+    <% end %>
     <%= link_to 'New Photo', new_newsletter_photo_path(@newsletter), :class => 'button small' %>
   </div>
 </div>
