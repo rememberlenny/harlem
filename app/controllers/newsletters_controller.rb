@@ -10,6 +10,8 @@ class NewslettersController < ApplicationController
   # GET /newsletters/1
   # GET /newsletters/1.json
   def show
+    @events = @newsletter.events.all
+    @photos = @newsletter.photos.all
   end
 
   # GET /newsletters/new
