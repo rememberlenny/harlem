@@ -2,5 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Show', newsletter_photo_path(@newsletter.id, @event.id) %> |
+
+<%= link_to 'Back', newsletter_events_path %>
