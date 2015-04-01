@@ -4,7 +4,8 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
-    @photos = Photo.all
+    @newsletter = Newsletter.find(params[:newsletter_id])
+    @photos = @newsletter.photos.all
   end
 
   # GET /photos/1
@@ -27,7 +28,7 @@ class PhotosController < ApplicationController
   # POST /photos.json
   def create
     @newsletter = Newsletter.find(params[:newsletter_id])
-    @photo = Photo.new(photo_params)
+    @photo = @newsletter.photos.new(photo_params)
 
     respond_to do |format|
       if @photo.save

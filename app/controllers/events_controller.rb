@@ -5,6 +5,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = @newsletter.events.all
+    @newsletter = Newsletter.find(params[:newsletter_id])
   end
 
   # GET /events/1

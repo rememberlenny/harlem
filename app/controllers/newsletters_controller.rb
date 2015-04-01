@@ -10,8 +10,6 @@ class NewslettersController < ApplicationController
   # GET /newsletters/1
   # GET /newsletters/1.json
   def show
-    @events = @newsletter.events.all
-    @photos = @newsletter.photos.all
   end
 
   # GET /newsletters/new
@@ -67,6 +65,8 @@ class NewslettersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_newsletter
       @newsletter = Newsletter.find(params[:id])
+      @events = @newsletter.events.all
+      @photos = @newsletter.photos.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
