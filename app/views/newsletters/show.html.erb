@@ -10,6 +10,8 @@
     <% @events.each do |event| %>
       <div class="row">
         <%= event %>
+        <%= link_to 'Edit', [:edit, @newsletter, event] %>
+        <%= link_to 'Delete', newsletter_event_path(@newsletter.id, event.id), :confirm => "Are you sure you want to delete this attachment?", :method => :delete %>
       </div>
     <% end %>
     <%= link_to 'New Schedule', new_newsletter_event_path(@newsletter), :class => 'button small' %>
@@ -19,6 +21,8 @@
     <% @photos.each do |photo| %>
       <div class="row">
         <%= photo %>
+        <%= link_to 'Edit', [:edit, @newsletter, photo] %>
+        <%= link_to 'Delete', newsletter_photo_path(@newsletter.id, photo.id), :confirm => "Are you sure you want to delete this attachment?", :method => :delete %>
       </div>
     <% end %>
     <%= link_to 'New Photo', new_newsletter_photo_path(@newsletter), :class => 'button small' %>

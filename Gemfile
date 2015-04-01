@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.0'
 
 # Backend
 gem 'rails', '4.2.0'
@@ -12,6 +12,8 @@ gem 'simple_form'
 gem 'twilio-ruby'
 gem 'chronic'
 gem 'ransack'
+gem "mini_magick"
+gem "refile", require: ["refile/rails", "refile/image_processing"]
 
 # Frontend
 gem 'acts-as-taggable-on', '~> 3.4'
