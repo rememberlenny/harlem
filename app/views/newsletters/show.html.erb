@@ -4,8 +4,17 @@
   <%= render 'newsletters/email' %>
 </div>
 
-<%= link_to 'New Photo', new_newsletter_photo_path(@newsletter), :class => 'button small' %>
-<%= link_to 'New Schedule', new_newsletter_event_path(@newsletter), :class => 'button small' %>
+<div class="row">
+  <div class="large-6 column">
+    <h2>Schedules</h2>
+    <%= link_to 'New Schedule', new_newsletter_event_path(@newsletter), :class => 'button small' %>
+  </div>
+  <div class="large-6 column">
+    <h2>Photos</h2>
+    <%= link_to 'New Photo', new_newsletter_photo_path(@newsletter), :class => 'button small' %>
+  </div>
+</div>
+
 
 <h1>Code</h1>
 <p>Copy and paste the content below</p>
