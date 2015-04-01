@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'uploads/new'
+
   # resources :events
   # resources :photos
+  resources :uploads
 
   resources :newsletters do
     resources :events

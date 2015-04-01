@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require dropzone.min
 //= require foundation
 //= require turbolinks
 //= require_tree .

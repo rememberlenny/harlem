@@ -14,6 +14,7 @@ gem 'chronic'
 gem 'ransack'
 gem "mini_magick"
 gem "refile", require: ["refile/rails", "refile/image_processing"]
+gem "paperclip", "~> 4.1"
 
 # Frontend
 gem 'acts-as-taggable-on', '~> 3.4'
