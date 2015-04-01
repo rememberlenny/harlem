@@ -23,14 +23,9 @@ ActiveRecord::Schema.define(version: 20150331135752) do
     t.datetime "updated_at",    null: false
   end
 
-  add_index "events", ["newsletter_id", "created_at"], name: "index_events_on_newsletter_id_and_created_at"
-  add_index "events", ["newsletter_id"], name: "index_events_on_newsletter_id"
-
   create_table "newsletters", force: :cascade do |t|
     t.string   "title"
     t.text     "message"
-    t.text     "schedules"
-    t.text     "photos"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -44,8 +39,5 @@ ActiveRecord::Schema.define(version: 20150331135752) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
-
-  add_index "photos", ["newsletter_id", "created_at"], name: "index_photos_on_newsletter_id_and_created_at"
-  add_index "photos", ["newsletter_id"], name: "index_photos_on_newsletter_id"
 
 end

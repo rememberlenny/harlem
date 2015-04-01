@@ -5,15 +5,11 @@ RSpec.describe "newsletters/index", type: :view do
     assign(:newsletters, [
       Newsletter.create!(
         :title => "Title",
-        :message => "MyText",
-        :schedules => "MyText",
-        :photos => "MyText"
+        :message => "MyText"
       ),
       Newsletter.create!(
         :title => "Title",
-        :message => "MyText",
-        :schedules => "MyText",
-        :photos => "MyText"
+        :message => "MyText"
       )
     ])
   end
@@ -21,8 +17,6 @@ RSpec.describe "newsletters/index", type: :view do
   it "renders a list of newsletters" do
     render
     assert_select "tr>td", :text => "Title".to_s, :count => 2
-    assert_select "tr>td", :text => "MyText".to_s, :count => 2
-    assert_select "tr>td", :text => "MyText".to_s, :count => 2
     assert_select "tr>td", :text => "MyText".to_s, :count => 2
   end
 end

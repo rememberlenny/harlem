@@ -5,11 +5,9 @@ class CreatePhotos < ActiveRecord::Migration
       t.string :url
       t.date :date
       t.text :notes
-      t.references :newsletter, index: true
+      t.integer :newsletter_id
 
       t.timestamps null: false
     end
-    add_foreign_key :photos, :newsletters
-    add_index :photos, [:newsletter_id, :created_at]
   end
 end

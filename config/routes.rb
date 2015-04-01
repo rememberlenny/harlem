@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   resources :events
-
   resources :photos
 
-  resources :newsletters
+  resources :newsletters do
+    resources :events
+    resources :photos
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
